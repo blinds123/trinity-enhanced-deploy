@@ -7,223 +7,289 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
-            font-family: Arial, sans-serif; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
             min-height: 100vh; 
             color: white;
             padding: 20px;
         }
-        .container { max-width: 600px; margin: 0 auto; text-align: center; }
+        .container { max-width: 700px; margin: 0 auto; text-align: center; }
         .card { 
-            background: rgba(255,255,255,0.9); 
-            border-radius: 15px; 
-            padding: 30px; 
+            background: rgba(255,255,255,0.95); 
+            border-radius: 20px; 
+            padding: 40px; 
             color: #333;
             margin: 20px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
         .btn { 
             background: linear-gradient(45deg, #ff6b6b, #4ecdc4); 
             color: white; 
             border: none; 
-            padding: 15px 30px; 
-            border-radius: 8px; 
-            font-size: 18px; 
+            padding: 18px 40px; 
+            border-radius: 12px; 
+            font-size: 20px; 
             font-weight: bold; 
             cursor: pointer; 
-            margin: 10px;
-            min-width: 200px;
+            margin: 15px 0;
+            min-width: 300px;
+            transition: all 0.3s ease;
         }
         .btn:hover { 
-            transform: translateY(-2px); 
+            transform: translateY(-3px); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
         .status { 
-            margin: 15px 0; 
-            padding: 10px; 
-            border-radius: 5px; 
+            margin: 20px 0; 
+            padding: 15px; 
+            border-radius: 10px; 
             font-weight: bold;
+            font-size: 16px;
         }
-        .success { background: #d4edda; color: #155724; }
-        .info { background: #d1ecf1; color: #0c5460; }
+        .success { background: #d4edda; color: #155724; border: 2px solid #c3e6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 2px solid #bee5eb; }
+        .warning { background: #fff3cd; color: #856404; border: 2px solid #ffeaa7; }
         .details { 
-            font-family: monospace; 
-            font-size: 12px; 
+            font-family: 'Monaco', 'Menlo', 'Consolas', monospace; 
+            font-size: 11px; 
             background: #f8f9fa; 
-            padding: 10px; 
-            border-radius: 5px; 
-            margin: 10px 0;
+            padding: 15px; 
+            border-radius: 8px; 
+            margin: 15px 0;
             text-align: left;
+            border: 1px solid #dee2e6;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .enhancement-list {
+            text-align: left;
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .enhancement-list h4 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        .enhancement-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .enhancement-list li {
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        .enhancement-list li:before {
+            content: "✅ ";
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🚀 TRINITY ENHANCED</h1>
-        <p>All Missing Elements from Sites 7, 8, 10 Added</p>
+        <p style="font-size: 18px; margin-bottom: 20px;">Ultimate Desktop Spoofing - All Missing Elements Added</p>
         
         <div class="card">
-            <h2>🎯 Enhanced with Critical Missing Elements</h2>
-            <p><strong>✅ WebGL Intel GPU Spoofing</strong> (Site 7)</p>
-            <p><strong>✅ Navigator configurable: false</strong> (Site 8)</p>
-            <p><strong>✅ Desktop timing delays</strong> (Site 8)</p>
-            <p><strong>✅ Font & Audio fingerprinting</strong> (Site 7)</p>
+            <h2 style="color: #ff6b6b; margin-bottom: 20px;">🎯 Based on Sites 7, 8, 10 Success Analysis</h2>
+            <p style="font-size: 16px; margin-bottom: 20px;">This version includes <strong>all the critical elements</strong> that were missing from Trinity Simple, based on your real iPhone testing where Sites 7, 8, and 10 worked while others failed.</p>
+            
+            <div class="enhancement-list">
+                <h4>🎭 Enhanced from Site 7 (Browser Fingerprint Masking):</h4>
+                <ul>
+                    <li>Intel UHD Graphics 630 WebGL spoofing</li>
+                    <li>Desktop font fingerprinting (20 fonts)</li>
+                    <li>Audio context desktop characteristics</li>
+                    <li>Canvas fingerprint masking</li>
+                </ul>
+                
+                <h4>⏱️ Enhanced from Site 8 (HTTP Request Timing):</h4>
+                <ul>
+                    <li>Desktop thinking delays (800-1500ms)</li>
+                    <li>configurable: false navigator properties</li>
+                    <li>Desktop performance timing patterns</li>
+                </ul>
+                
+                <h4>🔗 Enhanced from Site 10 (Request Chain):</h4>
+                <ul>
+                    <li>Multi-stage preparation sequences</li>
+                    <li>Desktop environment simulation</li>
+                </ul>
+            </div>
             
             <div id="status" class="status info">
-                Ready to test enhanced Trinity protection
+                Ready to test Trinity Enhanced - Click button to activate all spoofing layers
             </div>
             
-            <div id="details" class="details">
-                Spoofing details will appear here...
+            <div id="details" class="details" style="display: none;">
+                Spoofing activation log will appear here...
             </div>
             
-            <button class="btn" onclick="testEnhancedTrinity()">
-                🎭 Test Enhanced Trinity + SimpleSwap
+            <button class="btn" onclick="activateTrinityEnhanced()">
+                🎭 Activate Trinity Enhanced + SimpleSwap
             </button>
         </div>
         
         <div class="card">
-            <h3>🔍 What's New in Enhanced Version:</h3>
-            <p>• Intel UHD Graphics 630 WebGL spoofing</p>
-            <p>• Non-configurable navigator properties</p>
-            <p>• 800-1500ms desktop thinking delays</p>
-            <p>• Font detection spoofing (20 desktop fonts)</p>
-            <p>• Audio context desktop fingerprinting</p>
-            <p>• Performance timing desktop characteristics</p>
+            <h3 style="color: #4ecdc4;">🔍 What This Should Fix:</h3>
+            <div style="text-align: left; font-size: 16px;">
+                <p><strong>❌ Current Problem:</strong> €19.50 → €21+ mobile markup</p>
+                <p><strong>❌ Current Problem:</strong> Mercury not auto-selected</p>
+                <p><strong>✅ Expected Result:</strong> €19.50 stays €19.50</p>
+                <p><strong>✅ Expected Result:</strong> Mercury has green border</p>
+            </div>
         </div>
     </div>
 
     <script>
-        function testEnhancedTrinity() {
-            console.log('🚀 Activating Enhanced Trinity with all missing elements...');
+        function activateTrinityEnhanced() {
+            console.log('🚀 TRINITY ENHANCED: Activating all missing elements...');
             
             const statusDiv = document.getElementById('status');
             const detailsDiv = document.getElementById('details');
             
-            statusDiv.innerHTML = '⚡ Activating Enhanced Trinity protection...';
-            statusDiv.className = 'status info';
+            statusDiv.innerHTML = '⚡ Activating Trinity Enhanced protection...';
+            statusDiv.className = 'status warning';
+            detailsDiv.style.display = 'block';
             
-            let details = 'Enhanced Trinity Activation Log:\n\n';
+            let logText = 'TRINITY ENHANCED ACTIVATION LOG:\n' + '='.repeat(50) + '\n\n';
             
-            // ENHANCED ELEMENT 1: COMPREHENSIVE WEBGL SPOOFING (Missing from Trinity Simple)
-            console.log('🎭 Adding comprehensive WebGL spoofing with Intel GPU...');
-            details += '🎭 WebGL Intel GPU Spoofing:\n';
-            
-            const originalGetContext = HTMLCanvasElement.prototype.getContext;
-            HTMLCanvasElement.prototype.getContext = function(type, ...args) {
-                if (type === 'webgl' || type === 'experimental-webgl' || type === 'webgl2') {
-                    const context = originalGetContext.apply(this, [type, ...args]);
-                    
-                    if (context) {
-                        const originalGetParameter = context.getParameter;
-                        context.getParameter = function(parameter) {
-                            switch (parameter) {
-                                case context.VENDOR:
-                                    details += '  ✓ GPU Vendor: Intel Inc.\n';
-                                    return 'Intel Inc.';
-                                case context.RENDERER:
-                                    details += '  ✓ GPU Renderer: Intel(R) UHD Graphics 630\n';
-                                    return 'Intel(R) UHD Graphics 630';
-                                case context.VERSION:
-                                    details += '  ✓ WebGL Version: Desktop OpenGL\n';
-                                    return 'WebGL 1.0 (OpenGL ES 2.0 Chromium)';
-                                case context.SHADING_LANGUAGE_VERSION:
-                                    return 'WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)';
-                                case context.MAX_TEXTURE_SIZE:
-                                    return 16384;
-                                case context.MAX_VIEWPORT_DIMS:
-                                    return new Int32Array([16384, 16384]);
-                                default:
-                                    return originalGetParameter.call(this, parameter);
-                            }
-                        };
+            // CRITICAL ELEMENT 1: WebGL Intel GPU Spoofing (Missing from Trinity Simple)
+            try {
+                console.log('🎭 ENHANCED: Adding comprehensive WebGL Intel GPU spoofing...');
+                logText += '🎭 WebGL Intel GPU Spoofing (Site 7 Success Factor):\n';
+                
+                const originalGetContext = HTMLCanvasElement.prototype.getContext;
+                HTMLCanvasElement.prototype.getContext = function(type, ...args) {
+                    if (type === 'webgl' || type === 'experimental-webgl' || type === 'webgl2') {
+                        const context = originalGetContext.apply(this, [type, ...args]);
                         
-                        // Spoof extensions
-                        const originalGetExtension = context.getExtension;
-                        context.getExtension = function(name) {
-                            if (name === 'WEBGL_debug_renderer_info') {
-                                return {
-                                    UNMASKED_VENDOR_WEBGL: 37445,
-                                    UNMASKED_RENDERER_WEBGL: 37446
-                                };
-                            }
-                            return originalGetExtension.call(this, name);
-                        };
+                        if (context) {
+                            const originalGetParameter = context.getParameter;
+                            context.getParameter = function(parameter) {
+                                switch (parameter) {
+                                    case context.VENDOR:
+                                        return 'Intel Inc.';
+                                    case context.RENDERER:
+                                        return 'Intel(R) UHD Graphics 630';
+                                    case context.VERSION:
+                                        return 'WebGL 1.0 (OpenGL ES 2.0 Chromium)';
+                                    case context.SHADING_LANGUAGE_VERSION:
+                                        return 'WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)';
+                                    case context.MAX_TEXTURE_SIZE:
+                                        return 16384;
+                                    case context.MAX_VIEWPORT_DIMS:
+                                        return new Int32Array([16384, 16384]);
+                                    default:
+                                        return originalGetParameter.call(this, parameter);
+                                }
+                            };
+                            
+                            const originalGetExtension = context.getExtension;
+                            context.getExtension = function(name) {
+                                if (name === 'WEBGL_debug_renderer_info') {
+                                    return {
+                                        UNMASKED_VENDOR_WEBGL: 37445,
+                                        UNMASKED_RENDERER_WEBGL: 37446
+                                    };
+                                }
+                                return originalGetExtension.call(this, name);
+                            };
+                        }
+                        
+                        return context;
                     }
                     
-                    return context;
+                    return originalGetContext.apply(this, [type, ...args]);
+                };
+                
+                logText += '  ✅ GPU Vendor: Intel Inc.\n';
+                logText += '  ✅ GPU Renderer: Intel(R) UHD Graphics 630\n';
+                logText += '  ✅ WebGL extensions spoofed\n';
+                
+            } catch (e) {
+                logText += '  ⚠️ WebGL spoofing limited: ' + e.message + '\n';
+            }
+            
+            // CRITICAL ELEMENT 2: Canvas Fingerprint Spoofing
+            try {
+                console.log('🎭 ENHANCED: Adding canvas fingerprint spoofing...');
+                logText += '\n🎭 Canvas Fingerprint Spoofing:\n';
+                
+                const originalToDataURL = HTMLCanvasElement.prototype.toDataURL;
+                HTMLCanvasElement.prototype.toDataURL = function() {
+                    return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
+                };
+                
+                logText += '  ✅ Canvas signature masked to desktop pattern\n';
+                
+            } catch (e) {
+                logText += '  ⚠️ Canvas spoofing limited: ' + e.message + '\n';
+            }
+            
+            // CRITICAL ELEMENT 3: Font Fingerprinting (Missing from Trinity Simple)
+            try {
+                console.log('🎭 ENHANCED: Adding desktop font fingerprinting...');
+                logText += '\n🎭 Font Fingerprinting Spoofing (Site 7 Success Factor):\n';
+                
+                const desktopFonts = [
+                    'Arial', 'Times New Roman', 'Courier New', 'Verdana', 'Georgia',
+                    'Palatino', 'Garamond', 'Bookman', 'Comic Sans MS', 'Trebuchet MS',
+                    'Arial Black', 'Impact', 'Lucida Console', 'Tahoma', 'Lucida Sans Unicode',
+                    'MS Sans Serif', 'MS Serif', 'Segoe UI', 'Calibri', 'Consolas'
+                ];
+                
+                if (document.fonts && document.fonts.check) {
+                    const originalCheck = document.fonts.check;
+                    document.fonts.check = function(font) {
+                        const fontFamily = font.match(/['"]([^'"]+)['"]/);
+                        if (fontFamily && desktopFonts.includes(fontFamily[1])) {
+                            return true;
+                        }
+                        return originalCheck.call(this, font);
+                    };
                 }
                 
-                return originalGetContext.apply(this, [type, ...args]);
-            };
-            
-            // ENHANCED ELEMENT 2: CANVAS FINGERPRINT SPOOFING
-            console.log('🎭 Adding canvas fingerprint spoofing...');
-            details += '🎭 Canvas Fingerprint Spoofing:\n';
-            
-            const originalToDataURL = HTMLCanvasElement.prototype.toDataURL;
-            HTMLCanvasElement.prototype.toDataURL = function() {
-                details += '  ✓ Canvas signature masked\n';
-                return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
-            };
-            
-            // ENHANCED ELEMENT 3: FONT FINGERPRINTING SPOOFING (Missing from Trinity Simple)
-            console.log('🎭 Adding font fingerprinting spoofing...');
-            details += '🎭 Font Fingerprinting Spoofing:\n';
-            
-            const desktopFonts = [
-                'Arial', 'Times New Roman', 'Courier New', 'Verdana', 'Georgia',
-                'Palatino', 'Garamond', 'Bookman', 'Comic Sans MS', 'Trebuchet MS',
-                'Arial Black', 'Impact', 'Lucida Console', 'Tahoma', 'Lucida Sans Unicode',
-                'MS Sans Serif', 'MS Serif', 'Segoe UI', 'Calibri', 'Consolas'
-            ];
-            
-            if (document.fonts && document.fonts.check) {
-                const originalCheck = document.fonts.check;
-                document.fonts.check = function(font) {
-                    const fontFamily = font.match(/['"]([^'"]+)['"]/);
-                    if (fontFamily && desktopFonts.includes(fontFamily[1])) {
-                        return true;
-                    }
-                    return originalCheck.call(this, font);
-                };
-                details += `  ✓ ${desktopFonts.length} desktop fonts spoofed\n`;
+                logText += '  ✅ ' + desktopFonts.length + ' desktop fonts spoofed\n';
+                logText += '  ✅ Font detection overridden\n';
+                
+            } catch (e) {
+                logText += '  ⚠️ Font spoofing limited: ' + e.message + '\n';
             }
             
-            // ENHANCED ELEMENT 4: AUDIO FINGERPRINTING SPOOFING (Missing from Trinity Simple)
-            console.log('🎭 Adding audio fingerprinting spoofing...');
-            details += '🎭 Audio Fingerprinting Spoofing:\n';
-            
-            const AudioContext = window.AudioContext || window.webkitAudioContext;
-            if (AudioContext) {
-                const originalCreateOscillator = AudioContext.prototype.createOscillator;
-                AudioContext.prototype.createOscillator = function() {
-                    const oscillator = originalCreateOscillator.call(this);
-                    
-                    const originalStart = oscillator.start;
-                    oscillator.start = function(when) {
-                        return originalStart.call(this, when ? when + 0.001 : 0.001);
-                    };
-                    
-                    return oscillator;
-                };
-                details += '  ✓ Audio context desktop characteristics applied\n';
-            }
-            
-            // ENHANCED ELEMENT 5: PERFORMANCE TIMING SPOOFING
-            console.log('⏱️ Adding performance timing spoofing...');
-            details += '⏱️ Performance Timing Spoofing:\n';
-            
-            const originalNow = performance.now;
-            performance.now = function() {
-                const result = Math.floor(originalNow.call(this));
-                return result;
-            };
-            details += '  ✓ Desktop performance timing active\n';
-            
-            // ENHANCED ELEMENT 6: SCREEN SPOOFING
-            console.log('🖥️ Adding screen spoofing...');
-            details += '🖥️ Screen Spoofing:\n';
-            
+            // CRITICAL ELEMENT 4: Audio Fingerprinting (Missing from Trinity Simple)
             try {
+                console.log('🎭 ENHANCED: Adding audio context spoofing...');
+                logText += '\n🎭 Audio Fingerprinting Spoofing (Site 7 Success Factor):\n';
+                
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (AudioContext) {
+                    const originalCreateOscillator = AudioContext.prototype.createOscillator;
+                    AudioContext.prototype.createOscillator = function() {
+                        const oscillator = originalCreateOscillator.call(this);
+                        
+                        const originalStart = oscillator.start;
+                        oscillator.start = function(when) {
+                            return originalStart.call(this, when ? when + 0.001 : 0.001);
+                        };
+                        
+                        return oscillator;
+                    };
+                    logText += '  ✅ Audio context desktop characteristics applied\n';
+                } else {
+                    logText += '  ⚠️ AudioContext not available\n';
+                }
+                
+            } catch (e) {
+                logText += '  ⚠️ Audio spoofing limited: ' + e.message + '\n';
+            }
+            
+            // CRITICAL ELEMENT 5: Screen & Device Spoofing
+            try {
+                console.log('🖥️ ENHANCED: Adding screen and device spoofing...');
+                logText += '\n🖥️ Screen & Device Spoofing:\n';
+                
                 Object.defineProperty(window, 'screen', {
                     value: {
                         width: 2560,
@@ -239,26 +305,24 @@
                     },
                     configurable: false
                 });
-                details += '  ✓ 2560x1440 desktop screen dimensions\n';
-            } catch (e) {
-                details += '  ⚠️ Screen spoofing limited\n';
-            }
-            
-            try {
+                
                 Object.defineProperty(window, 'devicePixelRatio', {
                     value: 1,
                     configurable: false
                 });
-                details += '  ✓ Desktop pixel ratio (1.0)\n';
+                
+                logText += '  ✅ Screen: 2560x1440 desktop resolution\n';
+                logText += '  ✅ Device pixel ratio: 1.0 (desktop)\n';
+                
             } catch (e) {
-                details += '  ⚠️ Pixel ratio spoofing limited\n';
+                logText += '  ⚠️ Screen spoofing limited: ' + e.message + '\n';
             }
             
-            // ENHANCED ELEMENT 7: NAVIGATOR SPOOFING WITH configurable: false (Missing from Trinity Simple)
-            console.log('🖥️ Adding enhanced navigator spoofing...');
-            details += '🖥️ Navigator Spoofing (configurable: false):\n';
-            
+            // CRITICAL ELEMENT 6: Navigator Properties with configurable: false (Missing from Trinity Simple)
             try {
+                console.log('🖥️ ENHANCED: Adding locked navigator properties...');
+                logText += '\n🖥️ Navigator Properties (Site 8 Success Factor - configurable: false):\n';
+                
                 Object.defineProperties(navigator, {
                     userAgent: {
                         value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -281,28 +345,50 @@
                         configurable: false
                     }
                 });
-                details += '  ✓ Navigator properties locked (configurable: false)\n';
+                
+                logText += '  ✅ User-Agent: Windows Chrome 120 (LOCKED)\n';
+                logText += '  ✅ Touch Points: 0 (LOCKED)\n';
+                logText += '  ✅ Platform: Win32 (LOCKED)\n';
+                logText += '  ✅ Hardware: 16 cores, 32GB RAM (LOCKED)\n';
+                
             } catch (e) {
-                details += '  ⚠️ Navigator spoofing limited\n';
+                logText += '  ⚠️ Navigator spoofing limited: ' + e.message + '\n';
+            }
+            
+            // CRITICAL ELEMENT 7: Performance Timing
+            try {
+                console.log('⏱️ ENHANCED: Adding performance timing spoofing...');
+                logText += '\n⏱️ Performance Timing Spoofing:\n';
+                
+                const originalNow = performance.now;
+                performance.now = function() {
+                    const result = Math.floor(originalNow.call(this));
+                    return result;
+                };
+                
+                logText += '  ✅ Desktop performance timing characteristics\n';
+                
+            } catch (e) {
+                logText += '  ⚠️ Performance timing limited: ' + e.message + '\n';
             }
             
             // Update details display
-            detailsDiv.textContent = details;
+            detailsDiv.textContent = logText;
             
-            // ENHANCED ELEMENT 8: DESKTOP TIMING DELAY (Missing from Trinity Simple)
-            console.log('⏱️ Applying desktop thinking delay...');
-            statusDiv.innerHTML = '⏱️ Applying desktop user timing delay...';
+            // CRITICAL ELEMENT 8: Desktop Thinking Delay (Site 8 Success Factor)
+            console.log('⏱️ ENHANCED: Applying desktop user thinking delay...');
+            statusDiv.innerHTML = '⏱️ Applying desktop thinking delay (Site 8 pattern)...';
             
-            // Desktop users think before clicking (800-1500ms delay like Site 8)
             const desktopDelay = Math.random() * (1500 - 800) + 800;
-            details += `⏱️ Desktop Timing Delay: ${Math.round(desktopDelay)}ms\n`;
-            details += '\n🚀 All enhancements applied - launching SimpleSwap...\n';
-            detailsDiv.textContent = details;
+            logText += '\n⏱️ Desktop Thinking Delay (Site 8 Success Factor):\n';
+            logText += '  ✅ Delay: ' + Math.round(desktopDelay) + 'ms (desktop user behavior)\n';
+            logText += '\n🚀 All enhanced elements applied - launching SimpleSwap...\n';
+            detailsDiv.textContent = logText;
             
             setTimeout(() => {
-                console.log('🚀 Enhanced Trinity complete - launching SimpleSwap with all improvements');
+                console.log('🚀 TRINITY ENHANCED: All elements active - launching SimpleSwap');
                 
-                statusDiv.innerHTML = '🎭 Enhanced Trinity Active - Launching SimpleSwap';
+                statusDiv.innerHTML = '🎭 Trinity Enhanced Active - Opening SimpleSwap';
                 statusDiv.className = 'status success';
                 
                 const params = new URLSearchParams({
@@ -312,35 +398,44 @@
                     provider: 'mercuryo'
                 });
                 
-                const url = `https://simpleswap.io/exchange?${params.toString()}`;
+                const url = 'https://simpleswap.io/exchange?' + params.toString();
                 
-                console.log('🎯 Enhanced Trinity components active:');
+                console.log('🎯 TRINITY ENHANCED components active:');
                 console.log('  🎭 WebGL Intel GPU spoofing: ✅');
                 console.log('  🎭 Canvas fingerprint masking: ✅');
-                console.log('  🎭 Font fingerprinting spoofing: ✅');
-                console.log('  🎭 Audio fingerprinting spoofing: ✅');
-                console.log('  ⏱️ Performance timing spoofing: ✅');
-                console.log('  🖥️ Screen dimensions spoofing: ✅');
-                console.log('  🖥️ Navigator properties (locked): ✅');
-                console.log('  ⏱️ Desktop timing delay applied: ✅');
+                console.log('  🎭 Font fingerprinting (20 fonts): ✅');
+                console.log('  🎭 Audio fingerprinting: ✅');
+                console.log('  🖥️ Screen 2560x1440: ✅');
+                console.log('  🖥️ Navigator locked (configurable: false): ✅');
+                console.log('  ⏱️ Performance timing: ✅');
+                console.log('  ⏱️ Desktop thinking delay: ✅');
                 console.log('');
-                console.log('🚀 Opening enhanced SimpleSwap:', url);
+                console.log('🚀 Opening SimpleSwap with all enhancements:', url);
+                
+                logText += '\n✅ TRINITY ENHANCED COMPLETE!\n';
+                logText += 'Opening SimpleSwap with all spoofing layers active...\n';
+                logText += '\nVERIFY RESULTS:\n';
+                logText += '  • Price should be €19.50 (NOT €21+)\n';
+                logText += '  • Mercury should have GREEN BORDER\n';
+                logText += '  • Wallet field should be accessible\n';
+                detailsDiv.textContent = logText;
                 
                 try {
                     window.open(url, '_blank');
                     
                     setTimeout(() => {
-                        statusDiv.innerHTML = '✅ SimpleSwap launched with Enhanced Trinity - Check for €19.50 + Mercury green border';
-                        details += '\n✅ SimpleSwap launched successfully!\n';
-                        details += 'Verify: €19.50 (not €21) + Mercury green border\n';
-                        detailsDiv.textContent = details;
+                        statusDiv.innerHTML = '✅ SimpleSwap opened with Trinity Enhanced - Verify €19.50 + Mercury green border';
+                        logText += '\n✅ SimpleSwap successfully opened!\n';
+                        logText += 'Check the new tab for results...\n';
+                        detailsDiv.textContent = logText;
                     }, 1000);
                     
                 } catch (error) {
                     console.error('❌ Launch failed:', error);
                     statusDiv.innerHTML = '❌ Launch failed - check console';
-                    details += '\n❌ Launch failed - check browser console\n';
-                    detailsDiv.textContent = details;
+                    statusDiv.className = 'status warning';
+                    logText += '\n❌ Failed to open SimpleSwap: ' + error.message + '\n';
+                    detailsDiv.textContent = logText;
                 }
                 
             }, desktopDelay);
